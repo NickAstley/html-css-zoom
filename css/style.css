@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,6 +9,12 @@
 body {
     color: white;
     background-color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+.p-small {
+    padding: 0.3rem;
 }
 
 .main-container {
@@ -15,42 +23,69 @@ body {
 
 .row {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: var(--gap, 0);
-}
-
-.small-row {
-    height: 10vh;
-}
-
-.large-row {
-    height: 80vh;
 }
 
 .justify-end {
     justify-content: flex-end;
 }
 
+.align-start {
+    align-items: start;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
 .justify-between {
     justify-content: space-between;
 }
 
-.col {
-    background-color: red;
-    width: 200px;
-    height: 20px;
+.col-7 {
+    flex-basis: calc( ( 100% - ( var(--gap) * 6 ) ) / 7 );
+    height: calc( ( 78vh - ( var(--gap) * 6 *2 ) ) / 5);
+    overflow: hidden;
+    position: relative;
 }
 
-.gap-1 {
-    --gap : 1rem;
+.gap {
+    --gap : 5px;
+}
+
+.top-controls {
+    height: 10vh;
 }
 
 .container {
     width: 90%;
     margin: 0 auto;
+    height: 78vh;
+    margin-bottom: 2vh;
+}
+
+.grey-box {
+    background-color: #4A4A4A;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+.webcam-preview {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.member-name {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 0.7rem;
 }
 
 .menu {
     background-color: #222222;
+    height: 10vh;
 }
